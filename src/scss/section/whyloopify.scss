@@ -1,0 +1,150 @@
+// HomeBottom.scss
+.home-bottom {
+  background: #0c4a39;
+  
+  .wrep {
+    max-width: 1230px;
+    margin: 0 auto;
+    text-align: center;
+    
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      
+      .item {
+        display: flex;
+        width: calc(100% / 3);
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+      
+      .text {
+        min-width: unset;
+        margin-left: 10px;
+        text-align: left;
+        max-width: 329px;
+      }
+      
+      h3 {
+        color: #fff;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+      
+      .images {
+        img {
+          height: 60px;
+          width: 60px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.home-about {
+  padding: 40px 0px;
+  
+  .loopify-about {
+    margin-bottom: 40px;
+    max-width: unset;
+    
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: 2px;
+      color: #fff;
+      text-align: left;
+      margin-bottom: 10px !important;
+    }
+    
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: 0.5px;
+      color: #fff;
+      text-align: left !important;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-bottom .wrep .info {
+    .item {
+      width: calc(100% / 2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: nowrap;
+    }
+    
+    .text {
+      flex-grow: 1;
+      max-width: 60%;
+      text-align: left;
+      padding: 0;
+    }
+    
+    .images {
+      flex-shrink: 0;
+      width: 60px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .home-bottom .wrep .info .item {
+    width: calc(100% / 2);
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-bottom {
+    padding-bottom: 20px;
+
+    .home-about {
+    padding: 32px 0px;
+    
+    .loopify-about {
+      display: block;
+    }
+    
+    h2 {
+      display: block;
+      font-size: 20px;
+      letter-spacing: 0px;
+    }
+    
+    .loopify-about p {
+      font-size: 12px;
+    }
+  }
+ 
+    .wrep .info {
+
+      
+      h3 {
+        font-size: 12px;
+      }
+      
+      .item {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      
+      .images img {
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+  
+  
+}

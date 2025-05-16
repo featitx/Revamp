@@ -1,0 +1,70 @@
+// LogoTicker.scss
+.logo-ticker-container {
+    width: 100%;
+    padding: 40px 0px 60px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .logo-ticker-title {
+    color: #fff;
+    margin-bottom: 50px;
+    
+  }
+  
+  .logo-ticker {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .logo-ticker-track {
+    display: flex;
+    animation: scroll linear infinite;
+    width: fit-content;
+  }
+  
+  // .logo-ticker-track.paused {
+  //   animation-play-state: paused;
+  // }
+  
+  
+  .logo-ticker-item {
+    flex-shrink: 0;
+    padding: 0 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-ticker-image {
+    height: auto;
+    max-height: 50px;
+    max-width: 150px;
+    filter: brightness(0) invert(1); 
+  }
+  
+  /* Animation for infinite scroll */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* The transform needs to be the negative width of all logos (first set only) */
+      transform: translateX(-50%);
+    }
+  }
+  
+  
+  @media (max-width: 767px) {
+
+    .logo-ticker-container {
+      padding: 32px 0px;
+
+      .logo-ticker-title {
+        margin-bottom: 32px;
+    }
+    
+  }
+
+}

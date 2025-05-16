@@ -1,0 +1,41 @@
+.testimonial-carousel-section {
+  background-color: #92AB74;
+
+  .testimonial-slider {
+    overflow: hidden;
+    max-height: 700px;
+
+    .testimonials {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 0 160px;
+      margin: 0 -20px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .testimonal-slides {
+        img {
+          max-height: 700px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .testimonial-slider {
+      max-height: 400px;
+
+      .testimonials {
+        padding: 0 20px;
+        .testimonal-slides {
+          img {
+            max-height: 400px;
+          }
+        }
+      }
+    }
+  }
+}

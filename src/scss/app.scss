@@ -1,0 +1,75 @@
+body{
+  font-family: "asap";
+  overflow-x: hidden;
+
+  .container{
+    padding: 0 69px;
+    margin: 0 auto;
+    max-width: 1230px;
+  }
+
+  .title{
+    font-size: 28px;
+    line-height: 60px;
+    text-align: left;
+    font-weight: 700;
+    
+  }
+
+  .gap{
+    margin-bottom: 80px;
+  }
+
+  .fg-wrapper-page{
+    overflow: hidden;
+  }
+
+
+// styles plp page
+.plp-wrapper {
+  display: grid;
+  gap: 24px;
+  padding: 32px;
+  // background-color: #f7f7f7;
+
+  grid-template-columns: 1fr;
+
+ 
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+}
+
+
+@media (max-width: 767px) {
+
+  body{
+
+    .container{
+      padding: 0 20px;
+      
+    }
+  
+    .title{
+      font-size: 20px;
+      line-height: 20px;
+      text-align: left;
+      
+    }
+  
+    .gap{
+      margin-bottom: 32px;
+    }
+
+  }
+
+}

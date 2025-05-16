@@ -1,0 +1,41 @@
+// ContentSection.scss
+.gf-content {
+  background-color: #f4f3f0;
+  
+  .gf-content-container {
+    padding-top: 80px;
+  }
+  
+  p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.4;
+  }
+  
+  span {
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #757575;
+    margin: 10px 0px;
+  }
+  
+  h3 {
+    margin: 10px 0px;
+    font-weight: 700;
+    color: #757575;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gf-content {
+    .gf-content-container {
+      padding-top: 32px;
+    }
+  }
+}

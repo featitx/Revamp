@@ -1,0 +1,261 @@
+/* styles/ProductDetailPage.scss */
+.pdp-wrapper {
+  background: #fff;
+
+  .pdp-main {
+    display: grid;
+    // grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    margin: 40px 0;
+
+    .pdp-images {
+      position: relative;
+
+      .image-container {
+        position: relative;
+
+        .main-img {
+          max-width: 680px;
+          width: 100%;
+          border-radius: 12px;
+          object-fit: cover;
+        }
+
+      }
+
+      .thumbnails {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .thumb {
+        width: 212px;
+        height: 212px;
+        object-fit: cover;
+        border: 6px solid transparent;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: border-color 0.2s;
+
+        &.active {
+          border-color: #89B753;
+        }
+      }
+
+      .dots {
+        display: none;
+      }
+    }
+
+    .pdp-info {
+      h1 {
+        font-family: 'Asap';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 20px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        margin-bottom: 40px;
+        color: #525252;
+      }
+      .price {
+        font-family: 'Asap';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        color: #525252;
+        margin-bottom: 12px;
+
+      }
+      .bulk {
+        font-family: 'Asap';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        color: #525252;
+        margin-bottom: 40px;
+      }
+      .contains {
+        p {
+        font-family: Asap;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 12px;
+        letter-spacing: 0px;
+        margin-bottom: 20px;
+        color: #525252;
+        }
+        ul {
+         
+          list-style: none;
+          li {
+           font-family: Asap;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0px;
+            color: #8C8C8C;
+
+          }
+        }
+      }
+    }
+  }
+
+  .eco-box {
+    border-top: 1px solid #D1D1D1;
+    border-bottom: 1px solid #D1D1D1;
+
+    padding: 63px 0px;
+    margin-top: 325px;
+    p {
+      margin-bottom: 20px;
+      font-family: 'Asap';
+      font-weight: 700;
+      font-style: italic;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0px;
+      color: #525252;
+
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        font-family: 'Asap';
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 6px;
+        color: #7F7F7F;
+        display: flex;
+        align-items: center;
+        &:before {
+          content: "";
+          display: inline-block;
+          
+        }
+      }
+    }
+  }
+
+  .related {
+    margin: 60px 0px 32px;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      color: #525252;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+}
+
+/* MOBILE FIRST */
+@media (max-width: 900px) {
+  .pdp-wrapper {
+    .pdp-main {
+      grid-template-columns: 1fr;
+      gap: 24px;
+
+      .pdp-images {
+
+        .thumbnails {
+          display: none;
+        }
+
+        .dots {
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+          margin-top: 12px;
+
+          .dot {
+            width: 8px;
+            height: 8px;
+            background: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+            &.active {
+              background: #388e3c;
+            }
+          }
+        }
+      }
+
+      .pdp-info {
+        h1 { font-size: 20px; }
+        .price { font-size: 18px; }
+        .bulk { font-size: 15px; }
+      }
+    }
+
+    .related {
+      .related-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+/* SMALLER MOBILES */@media (max-width: 480px) {
+  /* target both .pdp-wrapper and .pdp-wrapper.container */
+  .pdp-wrapper, 
+  .pdp-wrapper.container {
+    padding: 16px;
+
+    .pdp-info {
+      h1 {
+        font-size: 16px;
+        margin-bottom: 24px;
+      }
+      .price {
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+      .bulk {
+        font-size: 14px;
+        margin-bottom: 24px;
+      }
+      .contains {
+        p {
+          font-size: 12px;
+          font-weight: 500;
+          margin-bottom: 8px;
+        }
+        ul {
+          list-style: none;
+          padding-left: 0;
+          li {
+            font-size: 12px;
+            line-height: 22px;
+          }
+        }
+      }
+    } /* end .pdp-info */
+
+    .eco-box {
+      padding: 24px 0;
+      margin-top: 32px;
+    }
+
+    .related {
+    margin: 32px 0px ;
+
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  } /* end .pdp-wrapper */
+}

@@ -1,0 +1,122 @@
+
+.press-says {
+  text-align: center;
+  margin: 80px 0px;
+  max-width: 100%;
+
+  h2 {
+    color: #0C4A39;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      width: 100%;
+      border-radius: 15px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05),
+                  -2px 0 4px 0 rgba(0, 0, 0, 0.05),
+                  2px 2px 4px 0 rgba(0, 0, 0, 0.03),
+                  0 -2px 4px 0 rgba(0, 0, 0, 0.05);
+      
+      a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        padding: 20px;
+      }
+    }
+
+    .image {
+      width: 100%;
+      height: 100px;
+      position: relative;
+      margin-top: 10px;
+      
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+
+    p {
+      margin: 10px 0 0;
+      height: 110px;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: #525252;
+      border-bottom: solid 1px #c7c7c7;
+    }
+  }
+
+  .press-date {
+    text-align: left;
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.29;
+    color: #525252;
+  }
+}
+
+@media (max-width: 1024px) {
+  .press-says {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .press-says {
+    margin: 32px 0px;
+    
+    ul {
+      display: flex;
+      overflow: auto;
+      scrollbar-width: none;
+      padding: 20px 10px;
+      margin: 0 -10px;
+      
+      &::-webkit-scrollbar {
+        display: none; /* Hide the scrollbar */
+      }
+      
+      li {
+        flex-shrink: 0;
+        max-width: 250px;
+        width: 100%;
+        height: 250px;
+      }
+      
+      p {
+        font-size: 10px;
+        height: 67px;
+      }
+    }
+    
+    h2 {
+      font-size: 20px;
+      margin: 0px;
+    }
+    
+    .press-date {
+      font-size: 10px;
+    }
+  }
+}

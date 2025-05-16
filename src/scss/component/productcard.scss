@@ -1,0 +1,72 @@
+// styles/ProductCard.scss
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: left;
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .product-image {
+    width: 100%;
+    height: 384px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .product-content{
+    padding: 20px;
+  }
+
+
+  .product-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #525252;
+  }
+
+  .product-description {
+    font-size: 10px;
+    color: #8C8C8C;
+    margin-bottom: 12px;
+  }
+
+  .product-price {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6B6B6B;
+    margin-bottom: 8px;
+  }
+
+  .product-bulk {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6B6B6B;
+    margin-bottom: 20px;
+  }
+
+   .hamper-contain {
+    font-size: 12px;
+    font-weight: 500;
+    color: #525252;
+    margin-bottom: 8px;
+  }
+
+  .product-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #00B29A;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

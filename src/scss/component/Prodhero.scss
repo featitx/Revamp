@@ -1,0 +1,194 @@
+.fg-hero {
+  padding: 80px 69px;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 500px;
+  min-height: 420px;
+  height: 100%;
+
+  .fg-hero-text {
+    flex: 1;
+    padding-right: 20px;
+    margin-top: 130px;
+    color: #fff;
+
+    h2 {
+      font-family: Asap;
+      font-weight: 800;
+      font-size: 48px;
+      letter-spacing: 0;
+      color: #fff;
+      line-height: 64px;
+      margin: 0;
+    }
+  }
+
+  .fg-hero-img{
+    position: relative;
+    max-width: 1000px;
+    z-index: 2;
+    width: 100%;
+    top: 250px;
+    left: 10%;
+   
+
+   img{
+    position: absolute;
+    max-width: 1100px;
+
+   }
+  }
+
+}
+
+.fg-subtitle {
+  font-family: Asap;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0;
+  margin: 32px 0;
+  color: #fff;
+}
+
+.fg-buttons {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.fg-btn-primary,
+.fg-btn-secondary {
+  font-family: Asap;
+  border-radius: 67px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fg-btn-primary {
+  background-color: white;
+  color: #125946;
+  text-decoration: none;
+  width: 200px;
+  height: 50px;
+}
+
+.fg-btn-secondary {
+  background-color: rgba(101, 101, 101, 0.5);
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+  width: 146px;
+  height: 44px;
+}
+
+@media (max-width: 1024px) {
+
+.fg-hero {
+    
+
+  .fg-hero-text {
+    margin-top: 100px;
+  }
+
+  .fg-hero-img{
+    position: relative;
+    // max-width: 1000px;
+    z-index: 2;
+    width: 100%;
+    top: -85px;
+    left: 55%;
+
+   img{
+    position: absolute;
+    max-width: 550px;
+
+   }
+  }
+
+}
+
+}
+
+
+@media (max-width: 900px) {
+
+  .fg-hero {
+
+  .fg-hero-img{
+     top: -80px;
+     left: 50%;
+
+   img{
+    position: absolute;
+    max-width: 520px;
+
+   }
+
+}
+
+}
+
+}
+
+@media (max-width: 767px) {
+
+.fg-hero{
+   padding: 40px 20px;
+
+  .fg-hero-text {
+    flex: 0.8;
+  
+  h2 {
+    font-size: 28px;
+    line-height: 40px;
+    margin: 0;
+  }
+}
+
+   .fg-hero-img{
+    position: relative;
+    // max-width: 1000px;
+    z-index: 2;
+    width: 100%;
+    top: -30px;
+    left: 20%;
+
+   img{
+    position: absolute;
+    max-width: 420px;
+
+   }
+  }
+
+  .fg-hero-text .fg-subtitle {
+    font-family: Asap;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0;
+    margin: 20px 0;
+  }
+
+  .fg-btn-primary,
+  .fg-btn-secondary {
+    height: 40px;
+  }
+
+  .fg-btn-primary {
+    width: 110px;
+  }
+
+  .fg-btn-secondary {
+    width: 102px;
+  }
+
+  .fg-buttons {
+    gap: 20px;
+  }
+}
+}

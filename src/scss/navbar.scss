@@ -1,0 +1,279 @@
+@import "variable";
+
+.transparent-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $transparent-bg-color;
+  backdrop-filter: blur(0px);
+  z-index: 1000;
+ 
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 56px;
+  height: 100%;
+  max-width: 1230px;
+  padding: 60px 69px;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  a {
+    color: $clr-white;
+    font-size: 16px;
+    font-weight: $fw-medium;
+    text-decoration: none;
+  }
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+
+  &.active {
+    display: flex; 
+  }
+
+
+   .active-dropdown{
+    background: black;
+    padding: 12px 24px;
+    position: relative;
+    border-radius: 10px;
+    z-index: 100;
+   }
+
+  .navbar-item {
+    position: relative;
+
+   
+
+    .navbar-link {
+      color: $link-color;
+      text-decoration: none;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+    }
+
+  }
+}
+
+.static {
+  display: none;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: $link-color;
+  }
+}
+
+.search-icon {
+  img {
+    height: 20px;
+  }
+}
+
+/* Mega Dropdown Styles */
+.mega-dropdown {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-top: 10px;
+  z-index: 1000;
+  animation: fadeIn 0.3s;
+  width: 670px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mega-dropdown-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 700px;
+  padding: 20px 30px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dropdown-arrow{
+  padding: 2px 2px 0px;
+}
+
+.dropdown-column {
+  padding: 0 20px 32px;
+
+  h3 {
+    color: $clr-white;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 16px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      margin-bottom: 15px;
+
+      a {
+        color: $link-color;
+        text-decoration: none;
+        font-size: 14px;
+        display: block;
+        
+      }
+
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive styles
+@media (max-width: 1024px) {
+
+  .navbar-container {
+    padding: 25px 20px;
+  }
+
+  .brand-logo{
+  height: 40px;
+  width: 100px;
+  }
+
+
+
+  .search-icon {
+      
+    img {
+    height: 14px; 
+    }
+
+    }
+
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  
+  .navbar-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 79%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-height: 100vh;
+    overflow: hidden;
+    gap: 0;
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+
+  .active-dropdown{
+    padding: 0;
+  }
+
+    .static {
+      display: flex;
+      color: $clr-white;
+      justify-content: space-between;
+      align-items: center;
+      font-style: italic;
+      font-size: 15px;
+
+      img {
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .navbar-item {
+      margin: 0;
+      width: 100%;
+
+      .navbar-link {
+        display: block;
+        padding: 20px 0px;
+        text-align: left;
+        color: $link-color;
+        border-bottom: 1px solid #31302f;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .mega-dropdown {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .mega-dropdown-content {
+    flex-direction: column;
+    padding: 10px;
+    flex-wrap: nowrap;
+    // height: 100vh;
+    overflow: scroll;
+    max-width: 600px;
+  }
+
+  .dropdown-column {
+    margin-bottom: 20px;
+    padding: 0;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+@media (max-width : 767px) {
+   .brand-logo{
+    height: 20px;
+    width: 60px ;
+  }
+}

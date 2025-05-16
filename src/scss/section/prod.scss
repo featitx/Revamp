@@ -1,0 +1,345 @@
+.prod-section {
+  position: relative;
+  margin: 80px 0;
+}
+.prod-top-green {
+  background-color: #92ab74;
+  min-height: 600px;
+  overflow: hidden;
+}
+.container-prod {
+  max-width: 1236px; 
+  padding: 0 69px;
+}
+.prod-header {
+  margin: 40px 0 60px;
+}
+.prod-header h2 {
+  font-family: "Asap";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 28px;
+  color: #fff;
+}
+.prod-header p {
+  font-family: Asap;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 38px;
+  color: #fff;
+  margin-top: 20px;
+}
+.prod-feature-selector {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+.prod-feature-selector::-webkit-scrollbar {
+  display: none;
+}
+.prod-feature-btn {
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50px;
+  color: #fff;
+  border: 3px solid #fff;
+  transition: all 0.3s ease;
+  font-family: "Asap";
+  font-size: 16px;
+  padding: 12px 40px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.prod-feature-btn:hover,
+.prod-feature-btn.prod-active {
+  background: #fff;
+  color: #125946;
+  font-weight: 600;
+}
+.prod-image-container {
+  max-width: 1000px;
+  margin: -320px auto 50px;
+  position: relative;
+}
+.prod-laptop-image {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+.prod-laptop-image.prod-active {
+  display: block;
+}
+.prod-stepper-container {
+  margin-bottom: 20px;
+}
+.prod-stepper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.prod-stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.prod-stepper-item.completed .prod-step-counter {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #92ab74;
+  border: 4px solid #92ab74;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+.prod-stepper-item .prod-step-counter {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+.prod-step-name {
+  margin-top: 16px;
+  font-family: Asap;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  color: #125946;
+  text-align: center;
+}
+.prod-step-subtitle {
+  max-width: 220px;
+  margin-top: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #125946;
+}
+.prod-stepper-item::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 100%;
+  border-bottom: 3px solid #92ab74;
+  z-index: -1;
+}
+
+.prod-stepper-item:last-child::after {
+  content: none;
+}
+.know-more-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.prod-know-more {
+  max-width: 1227px;
+  width: 100%;
+  height: 108px;
+  border-radius: 12px;
+  background-color: #f7f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+.prod-know-more h3 {
+  font-family: Asap;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #125946;
+}
+.prod-know-more > button {
+  width: 150px;
+  height: 44px;
+  border-radius: 100px;
+  background-color: #125946;
+  color: #fff;
+  font-family: Asap;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  border: none;
+}
+.prod-know-more > button > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+// Responsive adjustments (maintained original breakpoints)
+@media (max-width: 1300px) {
+  .prod-image-container {
+    margin-top: -290px;
+  }
+}
+@media (max-width: 1024px) {
+
+    .container-prod {
+    padding: 0px 20px ;
+    }
+
+    .prod-description {
+        text-align: left;
+        padding-left: 24px;
+        align-items: flex-start;
+        flex: 1;
+      }
+
+    .prod-feature-selector {
+        gap: 12px
+    }
+
+  .prod-top-green {
+    min-height: 580px;
+  }
+  .prod-header h2 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .prod-header p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .prod-image-container {
+    margin-top: -290px;
+  }
+}
+@media (max-width: 768px) {
+  .prod-section {
+    margin: 32px 0;
+  }
+  .prod-feature-selector {
+    padding: 0 40px;
+    margin: 0 -20px;
+    justify-content: flex-start;
+  }
+  .prod-stepper-wrapper {
+    display: block;
+    margin-top: 30px;
+  }
+  .prod-stepper-item.completed .prod-step-counter {
+     height: 44px;
+     width: 44px;
+     font-size: 20px;
+  }
+
+  .prod-stepper-item {
+    flex-direction: row;
+    padding-bottom: 0px;
+  }
+  .prod-stepper-item::after {
+    border-bottom: none;
+    width: 3px;
+    left: 25px;
+    height: 100%;
+    background: #92AB74;
+  }
+  .prod-stepper-item .prod-step-counter {
+    margin-bottom: 0;
+  }
+  .prod-step-name {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+  }
+  .prod-step-subtitle {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    margin-top: 4px;
+  }
+  .prod-top-green {
+    min-height: 340px;
+  }
+  .prod-header {
+    margin: 32px 0 28px;
+  }
+  .prod-header h2 {
+    font-size: 22px;
+  }
+  .prod-header p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .prod-feature-btn {
+    max-width: 200px;
+  }
+  .prod-image-container {
+    margin-top: -100px;
+    padding: 0 15px;
+  }
+  .know-more-wrapper .prod-know-more {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+    border-radius: 0;
+    gap: 0px;
+  }
+  .prod-know-more h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .prod-header h2 {
+    font-size: 20px;
+  }
+  .prod-header p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .prod-feature-btn {
+    height: 40px;
+    max-width: 178px;
+    font-size: 16px;
+  }
+  .prod-image-container {
+    margin-top: -90px;
+    margin-bottom: 0;
+  }
+  .prod-stepper-item {
+    padding-bottom: 0px;
+  }
+  .prod-step-name {
+    font-size: 14px;
+  }
+  .prod-step-subtitle {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .prod-know-more h3 {
+    font-size: 14px;
+  }
+  .prod-know-more > button {
+    background: none;
+    border: none;
+    color: #00b29a;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .prod-know-more > button > a {
+    color: #00b29a;
+  }
+  .prod-know-more > button > a::after {
+    content: " >";
+  }
+}

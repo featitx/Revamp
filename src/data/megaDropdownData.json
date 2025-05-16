@@ -1,0 +1,58 @@
+{
+  "megaDropdownData": {
+    "categories": [
+      {
+        "title": "Occasions",
+        "items": [
+          { "name": "Diwali", "url": "/occasions/diwali" },
+          { "name": "Christmas", "url": "/occasions/christmas" },
+          { "name": "New Year", "url": "/occasions/new-year" },
+          { "name": "Women's Day", "url": "/occasions/womens-day" },
+          { "name": "Earth Day", "url": "/occasions/earth-day" }
+        ]
+      },
+      
+      {
+        "title": "Recipients",
+        "items": [
+          { "name": "Employees", "url": "/recipients/employees" },
+          { "name": "Clients", "url": "/recipients/clients" },
+          { "name": "Leadership", "url": "/recipients/leadership" }
+        ]
+      },
+      {
+        "title": "Milestones",
+        "items": [
+          { "name": "Employee Onboarding", "url": "/milestones/onboarding" },
+          { "name": "Birthdays", "url": "/milestones/birthdays" },
+          { "name": "Work Anniversaries", "url": "/milestones/anniversaries" }
+        ]
+      },
+      {
+        "title": "Events",
+        "items": [
+          { "name": "Conferences", "url": "/events/conferences" },
+          { "name": "Foundation Day", "url": "/events/foundation-day" },
+          { "name": "Offsites", "url": "/events/offsites" }
+        ]
+      },
+      {
+        "title": "Sustainability Scale",
+        "items": [
+          { "name": "40% I'm taking the first step - small swaps, big smiles!", "description": "" },
+          { "name": "60% A little green in our gifts, a lot of hope for the planet!", "description": "" },
+          { "name": "80% I'm getting there... but we're alright with a little plastic", "description": "" },
+          { "name": "100% We're all in! We want a zero-plastic gift hamper!", "description": "" }
+        ]
+      },
+      {
+        "title": "Signature Collections",
+        "items": [
+          { "name": "Signature Collection I", "url": "/collections/signature-1" },
+          { "name": "Signature Collection II", "url": "/collections/signature-2" },
+          { "name": "Signature Collection III", "url": "/collections/signature-3" }
+        ]
+      }
+    ]
+  }
+}

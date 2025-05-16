@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Dosis:wght@200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+@import "../variable.scss";
+
+.green-card{
+    padding: 56px 32px;
+    background: $clr-secondary;
+    color: $clr-white;
+    border-radius: 12px;
+
+
+    h2{
+        font-family: "Asap";
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 48px;
+        letter-spacing: 0px;
+        text-align: center;
+        margin-bottom: 25px;
+
+    }
+
+    p{
+        font-family: "Dosis";
+        font-weight: 600;
+        font-size: $p-fs-d;
+        line-height: 16px;
+        letter-spacing: 2px;
+        text-align: center;
+
+    }
+}
+
+
+@media ( max-width: 767px) {
+    .green-card{
+        padding: 29px 22px;
+        
+    
+        h2{
+            font-size: $title-fs-m;
+            margin-bottom: 0px;
+    
+        }
+    
+        p{
+         
+            font-size: $p-fs-m;
+           
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import "../variable.scss";
+
+.curve-button {
+    font-family: "asap";
+    padding: 12px 24px;
+    border: none;
+    border-radius: 999px;
+    font-size: $p-fs-d;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 2.95px 2.95px 0px #00000040;
+   
+  }
+
+
+  @media (max-width: $mobile-breakpoint) {
+  .curve-button {
+    font-size: $p-fs-m;
+    white-space: nowrap;
+  }
+}

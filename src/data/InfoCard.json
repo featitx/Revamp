@@ -1,0 +1,41 @@
+{
+    "stats": [
+      {
+        "id": 1,
+        "value": "2,00,000+ kg",
+        "unit": "",
+        "label": "Plastic Pollution Prevented"
+      },
+      {
+        "id": 2,
+        "value": "90,000+",
+        "unit": "",
+        "label": "Gift Hampers Sold"
+      },
+      {
+        "id": 3,
+        "value": "12,000+",
+        "unit": "",
+        "label": "Locations Shipped To"
+      },
+      {
+        "id": 4,
+        "value": "400+",
+        "unit": "",
+        "label": "Clients Served"
+      },
+      {
+        "id": 5,
+        "value": "99.99%",
+        "unit": "",
+        "label": "On-Time Delivery"
+      },
+      {
+        "id": 6,
+        "value": "0.00003%",
+        "unit": "",
+        "label": "Error Rate"
+      }
+    ]
+  }
+  
