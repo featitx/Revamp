@@ -1,0 +1,35 @@
+.info-btn{
+    background-color: #FCFCFC;
+    box-shadow: 0px -2px 7px 0px rgba(215, 215, 215, 0.25);
+    width: 100%;
+    position: fixed;
+    padding: 20px 50px;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    a{
+        font-family: "Asap";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-decoration: none;
+        color: #fff;
+        padding: 15px 40px;
+        background: #00B29A;
+        border-radius: 999px;
+        margin: 0 69px;
+        
+    }
+
+
+    @media (max-width : 1024px) {
+        padding: 10px 50px;
+
+        a{
+           font-size: 12px; 
+           padding: 10px 30px;
+        }
+    }
+  }

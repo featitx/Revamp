@@ -40,8 +40,7 @@ const Homepage = () => {
       <PressCoverage/>
       <WhyLoopify/>
       <Faq/>
-      <Footer/>
-      
+          
       </div>
   )
 }

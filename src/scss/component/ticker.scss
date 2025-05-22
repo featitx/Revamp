@@ -24,11 +24,7 @@
     width: fit-content;
   }
   
-  // .logo-ticker-track.paused {
-  //   animation-play-state: paused;
-  // }
-  
-  
+    
   .logo-ticker-item {
     flex-shrink: 0;
     padding: 0 70px;
@@ -41,7 +37,6 @@
     height: auto;
     max-height: 50px;
     max-width: 150px;
-    filter: brightness(0) invert(1); 
   }
   
   /* Animation for infinite scroll */
@@ -50,7 +45,6 @@
       transform: translateX(0);
     }
     100% {
-      /* The transform needs to be the negative width of all logos (first set only) */
       transform: translateX(-50%);
     }
   }
@@ -64,7 +58,17 @@
       .logo-ticker-title {
         margin-bottom: 32px;
     }
-    
+
+    .logo-ticker-item {
+       padding: 0 30px;
+    }
+
+   .logo-ticker-image {
+    height: auto;
+    max-height: 50px;
+    max-width: 85px;
+  } 
+
   }
 
 }

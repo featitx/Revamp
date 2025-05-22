@@ -14,6 +14,7 @@
 
       .image-container {
         position: relative;
+        touch-action: pan-y;
 
         .main-img {
           max-width: 680px;
@@ -163,13 +164,28 @@
 }
 
 /* MOBILE FIRST */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .pdp-wrapper {
+
+     .eco-box {
+         margin-top: 40px;
+         padding: 30px 0px;
+          }
+
     .pdp-main {
       grid-template-columns: 1fr;
       gap: 24px;
 
       .pdp-images {
+
+        .image-container{
+
+        .main-img{
+          max-width: 1000px;
+          width: 100%;
+        }
+
+      }
 
         .thumbnails {
           display: none;
@@ -192,6 +208,7 @@
             }
           }
         }
+
       }
 
       .pdp-info {

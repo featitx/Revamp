@@ -1,6 +1,6 @@
 // pages/ProductListingPage.jsx
 import React from "react";
-import ProductCard from "../components/productcard";
+import ProductCard from '../components/Productcard.jsx' ; 
 import productData from "../data/productsData";
 import "../scss/app.scss";
 

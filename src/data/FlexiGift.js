@@ -10,27 +10,42 @@ export const flexiGiftData = {
   features: {
     backgroundColor: "#fff",
     heroImage: "https://cdn.shopify.com/s/files/1/0701/5396/1684/files/flexi-gifting.png?v=1741342468",
+    // heroImage: "../public/images/flexigift/laptop-image-1.svg",
+
     items: [
       {
         title: "Your portal. Your way.",
         description: "Your portal will be tailor-made to reflect your company's vibe - from your logo to selection of gifts.",
         iconBgColor: "#92AB74",
         titleColor: "#125946",
-        textColor: "#0C4A39"
+        textColor: "#0C4A39" , 
+        icon: '../public/images/flexigift/setting.svg'
+        
+      },
+      {
+        title: "Empower employees. Boost morale.",
+        description: "Freedom of choice ensures the team feels valued and happy - because they get what they truly want!",
+        iconBgColor: "#92AB74",
+        titleColor: "#125946",
+        textColor: "#0C4A39" , 
+        icon: '../public/images/flexigift/empowerment.svg'
+        
       },
       {
         title: "Simple. Reliable. Hassle-free.",
         description: "We handle everything - from setup to delivery - so HR can focus on what really matters.",
         iconBgColor: "#92AB74",
         titleColor: "#125946",
-        textColor: "#0C4A39"
+        textColor: "#0C4A39",
+        icon: '../public/images/flexigift/shield.svg'
       },
       {
         title: "Personal over predictable.",
         description: "A thoughtful curation of gifts creates a more meaningful experience - far beyond a generic gift voucher.",
         iconBgColor: "#92AB74",
         titleColor: "#125946",
-        textColor: "#0C4A39"
+        textColor: "#0C4A39", 
+        icon: '../public/images/flexigift/glitter.svg'
       }
     ]
   },

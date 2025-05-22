@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import '../scss/header.scss';
-import carouselDataFile from '../data/carouselData.json';
-import CurveButton from '../components/CurveButton';
+import React, { useState, useEffect } from "react";
+import "../scss/section/header.scss";
+import carouselDataFile from "../data/carouselData.json";
+import CurveButton from "../components/CurveButton";
 
 const FullWidthCarousel = () => {
   const carouselData = carouselDataFile.carouselData;
@@ -19,7 +19,7 @@ const FullWidthCarousel = () => {
     return () => clearInterval(interval);
   }, [currentSlide, isAnimating]);
 
-  const goToSlide = (index) => {
+  const goToSlide = index => {
     if (index === currentSlide || isAnimating) return;
 
     setIsAnimating(true);
@@ -39,29 +39,52 @@ const FullWidthCarousel = () => {
     <div className="full-width-carousel">
       <div className="carousel-container">
         {carouselData.map((slide, index) => (
-          <div 
+          <div
             key={slide.id}
-            className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
+            className={`carousel-slide ${
+              index === currentSlide ? "active" : ""
+            }`}
             style={{ backgroundImage: `url(${slide.image})` }}
           >
             <div className="overlay"></div>
             <div className="content-container">
               <div className="text-content">
                 <div className="header-content">
-                  <h1>Earth-friendly gifting solutions for businesses that give a damn!</h1>
-                  <img src="https://cdn.shopify.com/s/files/1/0701/5396/1684/files/hd-award.png?v=1739873942" alt="" className='award-logo' width="140px"/>
+                  <h1>
+                    Earth-friendly gifting solutions for businesses that give a
+                    damn!
+                  </h1>
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0701/5396/1684/files/hd-award.png?v=1739873942"
+                    alt=""
+                    className="award-logo"
+                    width="140px"
+                  />
                 </div>
                 <div className="btn-wrapper">
-                  <CurveButton text="Speak to a Gifting Advisor" textColor="#125946" backgroundclr='#FFFFFF'/>
-                  <CurveButton text="See what’s in store" backgroundclr='transparent' border='3px solid #fff'/>
+                  <CurveButton
+                    text="Speak to a Gifting Advisor"
+                    textColor="#125946"
+                    backgroundclr="#FFFFFF"
+                  />
+                  <CurveButton
+                    text="See what’s in store"
+                    backgroundclr="transparent"
+                    border="3px solid #fff"
+                  />
                 </div>
                 <div className="paragraph-nav-container">
-                  <p>{slide.paragraph}</p>
+                  <div className="paragraph">
+                    <img src={slide.icon} alt="" className="slide-icon" />
+                    <p>{slide.paragraph}</p>
+                  </div>
                   <div className="carousel-dots">
                     {carouselData.map((_, dotIndex) => (
                       <button
                         key={dotIndex}
-                        className={`carousel-dot ${dotIndex === currentSlide ? 'active' : ''}`}
+                        className={`carousel-dot ${
+                          dotIndex === currentSlide ? "active" : ""
+                        }`}
                         onClick={() => goToSlide(dotIndex)}
                         aria-label={`Go to slide ${dotIndex + 1}`}
                       />

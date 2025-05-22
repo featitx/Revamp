@@ -4,7 +4,6 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  padding: 0 15px;
 
   .carousel-header {
     display: flex;
@@ -59,6 +58,7 @@
   .process-swiper {
     width: 100%;
     position: relative;
+    margin-left: -21px;
     padding-bottom: 60px;
 
     .swiper-slide {
@@ -167,6 +167,8 @@
     }
 
     .process-swiper {
+      padding: 0 25px;
+      margin-left: -30px;
       padding-bottom: 32px;
 
       .carousel-item .image-container {

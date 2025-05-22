@@ -28,15 +28,16 @@ body{
 // styles plp page
 .plp-wrapper {
   display: grid;
-  gap: 24px;
-  padding: 32px;
-  // background-color: #f7f7f7;
-
-  grid-template-columns: 1fr;
+  gap: 14px;
+  padding: 32px 20px !important;
+ 
+  grid-template-columns: repeat(2, 1fr);
 
  
   @media (min-width: 600px) {
+    gap: 24px;
     grid-template-columns: repeat(2, 1fr);
+  
   }
 
 

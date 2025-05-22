@@ -1,26 +1,44 @@
 // pages/ProductDetailPage.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import productData from "../data/productsData.js" ;
-import ProductCard from '../components/ProductCard.jsx' ;
+import { useSwipeable } from "react-swipeable";
+import productData from "../data/productsData.js";
+import ProductCard from "../components/ProductCard.jsx" ;
 import "../scss/section/pdp.scss";
-
+import ProductButton from "../components/ProductButton.jsx";
 
 const ProductDetailPage = () => {
-
   const { url } = useParams();
   const product = productData.find(p => p.url === url);
   const [mainIndex, setMainIndex] = useState(0);
 
+  // Reset carousel when changing products
+  useEffect(() => {
+    setMainIndex(0);
+  }, [url]);
+
   if (!product) return <p>Product not found.</p>;
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setMainIndex(i => (i + 1) % product.images.length),
+    onSwipedRight: () =>
+      setMainIndex(
+        i => (i - 1 + product.images.length) % product.images.length
+      ),
+    trackMouse: true,
+    trackTouch: true,
+    loop: true,
+    preventDefaultTouchmoveEvent: true,
+  });
+
   return (
+  <div>
     <div className="pdp-wrapper container">
       {/* MAIN IMAGE + INFO */}
       <div className="pdp-main">
         {/* IMAGE COLUMN */}
         <div className="pdp-images">
-          <div className="image-container">
+          <div {...handlers} className="image-container">
             <img
               src={product.images[mainIndex]}
               alt={product.title}
@@ -28,7 +46,7 @@ const ProductDetailPage = () => {
             />
           </div>
 
-          {/* desktop thumbnails */}
+          {/* Desktop thumbnails */}
           <div className="thumbnails">
             {product.images.map((img, i) => (
               <img
@@ -41,7 +59,7 @@ const ProductDetailPage = () => {
             ))}
           </div>
 
-          {/* mobile carousel dots */}
+          {/* Mobile carousel dots */}
           <div className="dots">
             {product.images.map((_, i) => (
               <span
@@ -56,11 +74,13 @@ const ProductDetailPage = () => {
         {/* INFO COLUMN */}
         <div className="pdp-info">
           <h1>{product.title}</h1>
-          <p className="price">MRP ₹{product.price}</p>
-          <p className="bulk">Bulk price for 50+ ₹{product.price}</p>
+          <p className="price">MRP ₹ <strong>{product.price}</strong></p>
+          <p className="bulk">Bulk price for 50+ ₹ <strong>{product.price}</strong></p>
 
           <div className="contains">
-            <p><strong>This hamper contains</strong></p>
+            <p>
+              <strong>This hamper contains</strong>
+            </p>
             <ul>
               {product.description.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -68,18 +88,18 @@ const ProductDetailPage = () => {
             </ul>
           </div>
 
-       {/* ECO BOX */}
-      <div className="eco-box">
-        <p><em>This hamper is packaged in zero-plastic.</em></p>
-        <ul>
-        <li>🌿 {product.carbonReduction}% less carbon emissions</li>
-        <li>♻️ {product.plasticReduction}% less plastic pollution</li>
-        </ul>
-      </div>
-
+          {/* ECO BOX */}
+          <div className="eco-box">
+            <p>
+              <em>This hamper is packaged in zero-plastic.</em>
+            </p>
+            <ul>
+              <li>🌿 {product.carbonReduction}% less carbon emissions</li>
+              <li>♻️ {product.plasticReduction}% less plastic pollution</li>
+            </ul>
+          </div>
         </div>
       </div>
-
 
       {/* RELATED */}
       <div className="related">
@@ -87,7 +107,7 @@ const ProductDetailPage = () => {
         <div className="related-grid">
           {productData
             .filter(p => p.url !== product.url)
-            .slice(0, 3)
+            .slice(0, 4)
             .map(p => (
               <ProductCard
                 key={p.id}
@@ -100,6 +120,8 @@ const ProductDetailPage = () => {
             ))}
         </div>
       </div>
+    </div>
+    <ProductButton/>
     </div>
   );
 };

@@ -1,19 +1,25 @@
+
 {
   "carouselData": [
     {
       "id": 1,
-      "image": "https://loopify.world/cdn/shop/files/home-banner-2.png?v=1738220073&width=3840",
-      "paragraph": "Our curated gifts are designed with the planet in mind. Each item is sourced responsibly and packaged with eco-friendly materials that leave a positive impression."
+      "image": "public/images/herobanner/hero-image-3.svg",
+      "paragraph": "Our curated gifts are designed with the planet in mind. Each item is sourced responsibly and packaged with eco-friendly materials that leave a positive impression." , 
+      "icon" : "../public/images/herobanner/icon-1.svg"
     },
     {
       "id": 2,
-      "image": "https://loopify.world/cdn/shop/files/home-banner-1.png?v=1738220072&width=2000",
-      "paragraph": "Stand out from the crowd with thoughtfully curated gifts that reflect your company values and create a lasting connection with your recipients."
+      "image": "public/images/herobanner/hero-image-2.svg",
+      "paragraph": "Stand out from the crowd with thoughtfully curated gifts that reflect your company values and create a lasting connection with your recipients." , 
+       "icon" : "../public/images/herobanner/icon-2.svg"
+      
     },
     {
       "id": 3,
-      "image": "https://loopify.world/cdn/shop/files/home-banner-3.png?v=1738220072&width=2000",
-      "paragraph": "From corporate branding to personal messages, our gifts can be tailored to your specific needs, helping you make a statement that resonates with your audience."
+      "image": "public/images/herobanner/hero-image.svg",
+      "paragraph": "From corporate branding to personal messages, our gifts can be tailored to your specific needs, helping you make a statement that resonates with your audience." ,
+       "icon" : "../public/images/herobanner/icon-3.svg"
+
     }
   ]
 }

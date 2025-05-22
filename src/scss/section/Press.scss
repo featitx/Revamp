@@ -55,7 +55,7 @@
 
     p {
       margin: 10px 0 0;
-      height: 110px;
+      height: 80px;
       text-align: left;
       font-size: 16px;
       font-weight: 600;
@@ -94,7 +94,7 @@
       margin: 0 -10px;
       
       &::-webkit-scrollbar {
-        display: none; /* Hide the scrollbar */
+        display: none; 
       }
       
       li {
@@ -106,7 +106,7 @@
       
       p {
         font-size: 10px;
-        height: 67px;
+        height: 60px;
       }
     }
     

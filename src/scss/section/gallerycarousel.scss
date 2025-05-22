@@ -145,7 +145,13 @@
     border: 0px solid #125946;
   }
   
- 
+  
+ @media (max-width: 1024px) {
+   .gallery-dot {
+      display: none;
+    }
+  
+ }
   
   // Responsive styles
   @media (max-width: 768px) {

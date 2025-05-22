@@ -12,11 +12,11 @@ const ProdFeatures = ({ features, heroImage, backgroundColor }) => {
         {features.map((feature, index) => (
           <div className="fg-feature" key={index}>
             <div className="fg-feature-icon" style={{ backgroundColor: feature.iconBgColor || '#92AB74' }}>
-              {feature.icon || (
-                <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* SVG content would go here */}
-                </svg>
-              )}
+               <img
+              src={feature.icon}
+              alt={`${feature.title} icon`}
+              className='feature-icons'
+             />
             </div>
             <div className="fg-feature-text">
               <h3 style={{ color: feature.titleColor || '#125946' }}>{feature.title}</h3>

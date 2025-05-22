@@ -26,19 +26,19 @@ const ProcessCarousel = () => {
 
   const slides = [
     {
-      image: "https://cdn.shopify.com/s/files/1/0701/5396/1684/files/process-2.png?v=1741169266",
+      image: "../public/images/process/process-1.svg",
       title: "Our gifting experts will understand your gifting needs",
     },
     {
-      image: "https://cdn.shopify.com/s/files/1/0701/5396/1684/files/process-1.png?v=1741169266",
+      image: "../public/images/process/process-2.svg",
       title: "Our curation team will customize some gift hampers for you",
     },
     {
-      image: "https://cdn.shopify.com/s/files/1/0701/5396/1684/files/process-3.png?v=1741169266",
+      image: "../public/images/process/process-3.svg",
       title: "We handle packaging and delivery logistics",
     },
     {
-      image: "https://cdn.shopify.com/s/files/1/0701/5396/1684/files/process-4.png?v=1741169266",
+      image: "../public/images/process/process-4.svg",
       title: "Gifts are delivered to recipients on time",
     }
   ];
@@ -81,21 +81,22 @@ const ProcessCarousel = () => {
         breakpoints={{
           // Mobile screens
           320: {
-            slidesPerView: 2,
+            slidesPerView: 1.8,
             spaceBetween: 80,
           },
           // Tablet screens
-          768: {
+          767: {
             slidesPerView: 2,
-            spaceBetween: 80,
+            spaceBetween: 100,
           },
+          
           // Desktop
           1400: {
             slidesPerView: 3,
             spaceBetween: 80,
           }
         }}
-        loop={true}
+        // loop={true}
         grabCursor={true}
         touchEventsTarget="container"
         className="process-swiper"

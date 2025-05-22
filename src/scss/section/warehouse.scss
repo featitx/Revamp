@@ -4,7 +4,7 @@
   }
   
   .image-banner {
-    background: url("https://cdn.shopify.com/s/files/1/0701/5396/1684/files/warehouse.png?v=1741168765") no-repeat center;
+    background: url("../public/images/warehouse/warehouse.svg") no-repeat center;
     background-size: cover;
     background-position: center;
     text-align: left;
@@ -15,6 +15,18 @@
     align-items: flex-start;
     padding-top: 40px ; 
   }
+
+ .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  pointer-events: none; /* lets clicks pass through */
+  background: linear-gradient(180deg, #323232 32.52%, rgba(50, 50, 50, 0) 100%);
+  mix-blend-mode: multiply;
+    
+}
 
 .container-warehouse{
     padding: 0px 69px ;
@@ -66,6 +78,11 @@
       color: #fff;
       max-width: 300px;
     }
+
+    .image-text-wrapper-sm{
+     padding: 20px 0px;
+    }
+
     .text-warehouse p {
       font-weight: 500;
       font-size: 10px;
@@ -91,9 +108,9 @@
 
     
 
-    .image-text-wrapper-sm{
-     padding: 20px 0px;
-    }
+    // .image-text-wrapper-sm{
+    //  padding: 20px 0px;
+    // }
     .text-warehouse p {
       font-weight: 500;
       font-size: 10px;

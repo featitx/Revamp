@@ -1,12 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
-import '../scss/navbar.scss';
+import '../scss/section/navbar.scss';
 import dropdownData from '../data/megaDropdownData.json';
 import cancelIcon from '../assets/images/cancel.svg'; 
-import Loopify from '../assets/images/Loopify-logo.svg';
-import search from '../assets/images/search.svg'
 
-const Navbar = ({ links }) => {
+
+const Navbar = ({ links , navmainclass  , Logo  , search , hamburger}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   
@@ -41,21 +40,16 @@ const Navbar = ({ links }) => {
 
 
   return (
-    <nav className="transparent-navbar">
+    <nav className = {navmainclass} >
       <div className="navbar-container">
         <div className="navbar-toggle" onClick={toggleMenu}>
-        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 1H13" stroke="white" strokeLinecap="round" strokeLinejoin="bevel"/>
-        <path d="M1 5H13" stroke="white" strokeLinecap="round" strokeLinejoin="bevel"/>
-        <path d="M1 9H13" stroke="white" strokeLinecap="round" strokeLinejoin="bevel"/>
-        </svg>
-
+        {hamburger}
         </div>
 
       
 
         <div className="navbar-brand">
-          <img src={Loopify} alt="" className='brand-logo'/>
+          <img src={Logo} alt="" className='brand-logo'/>
         </div>
 
         <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>

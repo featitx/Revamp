@@ -3,23 +3,22 @@ import Ticker from "../components/Tiker";
 export default function LogoTicker() {
  
 const demoLogos = [
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/wildcraft.png?v=1741779993', alt: 'Wildcraft' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/Lafolie.png?v=1741779993', alt: 'Lafolie' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/Assembly.png?v=1741779993', alt: 'Assembly' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/BlueTokai.png?v=1741779993', alt: 'Blue Tokai' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/Boat.png?v=1741779993', alt: 'Boat' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/Borosil.png?v=1741779993', alt: 'Borosil' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/Carvaan.png?v=1741779993', alt: 'Carvaan' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/Cross.png?v=1741779993', alt: 'Cross' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/Entisi.png?v=1741779993', alt: 'Entisi' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/Milton.png?v=1741779993', alt: 'Milton' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/Mokobara.png?v=1741779993', alt: 'Mokobara' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/parker.png?v=1741779993', alt: 'Parker' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/PierreCardin.png?v=1741779993', alt: 'Pierre Cardin' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/puma.png?v=1741779993', alt: 'Puma' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/Reebok.png?v=1741779993', alt: 'Reebok' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/UCB.png?v=1741779993', alt: 'UCB' },
-  { src: 'https://cdn.shopify.com/s/files/1/0701/5396/1684/files/Uppercase.png?v=1741779993', alt: 'Uppercase' }
+  { src: '../public/images/partner-logo/uppercase.svg', alt: 'Uppercase' },
+  { src: '../public/images/partner-logo/pierre-cardin.svg', alt: 'Pierre Cardin' },
+  { src: '../public/images/partner-logo/la-folie.svg', alt: 'La Folie' },
+  { src: '../public/images/partner-logo/ucb.svg', alt: 'Ucb' },
+  { src: '../public/images/partner-logo/cross.svg', alt: 'Cross' },
+  { src: '../public/images/partner-logo/reebok.svg', alt: 'Reebok' },
+  { src: '../public/images/partner-logo/puma.svg', alt: 'Puma' },
+  { src: '../public/images/partner-logo/parker.svg', alt: 'Parker' },
+  { src: '../public/images/partner-logo/mokobara.svg', alt: 'Mokobara' },
+  { src: '../public/images/partner-logo/Milton.svg', alt: 'Milton' },
+  { src: '../public/images/partner-logo/entisi.svg', alt: 'Entisi' },
+  { src: '../public/images/partner-logo/blue-tokai.svg', alt: 'Blue Tokai' },
+  { src: '../public/images/partner-logo/carvaan.svg', alt: 'Carvaan' },
+  { src: '../public/images/partner-logo/borosil.svg', alt: 'Borosil' },
+  { src: '../public/images/partner-logo/boat.svg', alt: 'Boat' },
+  { src: '../public/images/partner-logo/Assembly.svg', alt: 'Assembly' },
 ];
 
   
