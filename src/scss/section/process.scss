@@ -9,18 +9,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 40px 0 60px;
+    margin-bottom: 60px;
+    margin-top: 40px;
     position: relative;
     z-index: 10;
 
-    h2 {
-      font-family: "Asap";
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 40px;
-      letter-spacing: 0px;
-      vertical-align: middle;
-    }
+    // h2 {
+    //   // font-family: "Asap";
+    //   // font-weight: 700;
+    //   // font-size: 28px;
+    //   // line-height: 40px;
+    //   // letter-spacing: 0px;
+    //   // vertical-align: middle;
+    // }
 
     .navigation-buttons {
       display: flex;
@@ -202,11 +203,12 @@
         height: 200px;
       }
 
+
       .arrow-container {
-        right: -50px;
+        right: -80px;
 
         svg {
-          width: 80px;
+          width: 90px;
         }
       }
     }

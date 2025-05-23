@@ -12,6 +12,18 @@ const Navbar = ({ links , navmainclass  , Logo  , search , hamburger}) => {
 
   const { megaDropdownData } = dropdownData;
 
+  useEffect(() => {
+  if (isMenuOpen) {
+    document.body.classList.add('no-scroll');
+  } else {
+    document.body.classList.remove('no-scroll');
+  }
+
+  return () => {
+    document.body.classList.remove('no-scroll');
+  };
+}, [isMenuOpen]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -51,7 +63,8 @@ const Navbar = ({ links , navmainclass  , Logo  , search , hamburger}) => {
         <div className="navbar-brand">
           <img src={Logo} alt="" className='brand-logo'/>
         </div>
-
+   
+   <div className="nav-link-wrapper">
         <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
           <li className='static'>
             <h2>Hey there!</h2>
@@ -104,6 +117,7 @@ const Navbar = ({ links , navmainclass  , Logo  , search , hamburger}) => {
             </li>
           ))}
         </ul>
+      </div>
 
         <div className="search-icon">
           <img src={search} alt="" />

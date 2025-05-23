@@ -85,7 +85,7 @@ const Gallery = ({
 
           <div className="gallery-carousel-container">
             <button
-              className="gallery-prev-btn"
+              className= {`gallery-prev-btn ${currentIndex === 0 ? 'hidden' : ''}`}
               onClick={handlePrev}
               disabled={currentIndex === 0}
             >
@@ -116,7 +116,7 @@ const Gallery = ({
             </div>
 
             <button
-              className="gallery-next-btn"
+              className={`gallery-next-btn ${currentIndex >= maxIndex ? 'hidden' : ''}`}
               onClick={handleNext}
               disabled={currentIndex >= maxIndex}
             >

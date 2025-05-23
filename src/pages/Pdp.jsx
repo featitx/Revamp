@@ -73,6 +73,7 @@ const ProductDetailPage = () => {
 
         {/* INFO COLUMN */}
         <div className="pdp-info">
+          <div className="info-wrap">
           <h1>{product.title}</h1>
           <p className="price">MRP ₹ <strong>{product.price}</strong></p>
           <p className="bulk">Bulk price for 50+ ₹ <strong>{product.price}</strong></p>
@@ -87,7 +88,7 @@ const ProductDetailPage = () => {
               ))}
             </ul>
           </div>
-
+         </div>
           {/* ECO BOX */}
           <div className="eco-box">
             <p>
@@ -103,7 +104,7 @@ const ProductDetailPage = () => {
 
       {/* RELATED */}
       <div className="related">
-        <h2>More Gift Hampers</h2>
+        <h2 className="related-title">More Gift Hampers</h2>
         <div className="related-grid">
           {productData
             .filter(p => p.url !== product.url)

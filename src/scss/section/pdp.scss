@@ -51,6 +51,10 @@
     }
 
     .pdp-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
       h1 {
         font-family: 'Asap';
         font-weight: 700;
@@ -149,7 +153,7 @@
   .related {
     margin: 60px 0px 32px;
 
-    h2 {
+   .related-title {
       font-size: 20px;
       font-weight: 600;
       margin-bottom: 32px;
@@ -271,7 +275,7 @@
     margin: 32px 0px ;
 
       .related-grid {
-        grid-template-columns: 1fr;
+        gap: 10px;
       }
     }
   } /* end .pdp-wrapper */

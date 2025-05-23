@@ -58,9 +58,7 @@
     border-radius: 20px;
   }
   
-  .gallery-carousel-track {
-    gap: 15px;
-  }
+  
   
   .gallery-card-title {
     font-family: "Asap", sans-serif;
@@ -144,6 +142,11 @@
     background-color: #125946;
     border: 0px solid #125946;
   }
+
+.gallery-prev-btn.hidden,
+.gallery-next-btn.hidden {
+  display: none;
+}
   
   
  @media (max-width: 1024px) {
@@ -160,9 +163,14 @@
       padding-bottom: 20px;
       width: 276px;
     }
+
+   .gallery-carousel-track {
+    gap: 15px;
+  }
   
     .gallery-carousel-slide {
       max-width: 320px;
+      flex: 0;
     }
   
     .gallery-dot {
